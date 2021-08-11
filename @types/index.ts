@@ -1,23 +1,32 @@
-import AuthService from '~/services/test'
-import NavigationService from '~/services/navigation'
+
 interface IEnum {
   toSelect: { text: string; value: number }[]
 }
-interface Storage {
+interface IUser {
+  id: number
+  username: string
+  roles: string[]
+  name: string
+}
+export interface Storage {
   setState(key: string, val: any): void
   getState(key: string): any
   watchState(key: string, callback: (newValue: any) => any): void
-  setCookie(key: string, val: any, isJson: boolean): void
+  setCookie(key: string, val: any, isJson?: boolean): void
   getCookie(key: string): any
-  setLocalStorage(key: string, val: any, isJson: boolean): void
+  setLocalStorage(key: string, val: any, isJson?: boolean): void
   getLocalStorage(key: string): any
+  setUniversal(key: string, val: any, isJson?: boolean): void
+  getUniversal(key: string, isJson?: boolean): any
+  syncUniversal(key: string, val: any, isJson?: boolean): void
+  removeUniversal(key: string): any
 }
-interface Auth {
-  user?: Object
+export interface Auth {
+  user?: any
   loggedIn: boolean
   $storage: Storage
   loginWith(strategy: string, date: any): Promise<any>
-  login(): Promise<any>
+  login(args: any): Promise<any>
   setUser(user: any): void
   setToken(strategy: string, token: string): void
   setUserToken(token: string): Promise<any>
@@ -47,18 +56,17 @@ declare module 'vue/types/vue' {
 
 declare module 'vue/types/vue' {
   interface NuxtServiceInstance {
-    test: AuthService
-    auth_service: AuthService
-    navigation: NavigationService
+
   }
   interface NuxtEnumInstance {
     role: IEnum
     user_verify: IEnum
+    personality_test: IEnum
   }
 }
 
 declare module 'vue/types/options' {
-  interface ComponentOptions<V extends Vue> {
+  interface ComponentOptions<V> {
     auth?: string | boolean
   }
 }
