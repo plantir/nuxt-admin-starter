@@ -1,3 +1,4 @@
+import UserService from '~/services/users'
 
 interface IEnum {
   toSelect: { text: string; value: number }[]
@@ -56,7 +57,7 @@ declare module 'vue/types/vue' {
 
 declare module 'vue/types/vue' {
   interface NuxtServiceInstance {
-
+    users: UserService
   }
   interface NuxtEnumInstance {
     role: IEnum
