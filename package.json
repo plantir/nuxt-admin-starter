@@ -1,7 +1,7 @@
 {
-  "name": "resaa-new",
+  "name": "admin-panel",
   "version": "1.0.0",
-  "description": "My super-duper Nuxt.js project",
+  "description": "admin panel",
   "author": "armin",
   "private": true,
   "scripts": {
