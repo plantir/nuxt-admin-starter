@@ -10,7 +10,8 @@ export default {
     host: process.env.HOST || '0.0.0.0' // default: localhost
   },
   router: {
-    base: process.env.NODE_ENV == 'development' ? '/' : '/sec-admin/'
+    middleware: 'auth'
+    // base: process.env.NODE_ENV == 'development' ? '/' : '/sec-admin/'
     // middleware: 'nuxti18n'
   },
   robots: [
@@ -28,7 +29,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
+    titleTemplate: process.env.npm_package_name,
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
@@ -137,18 +138,19 @@ export default {
   auth: {
     redirect: {
       login: '/login',
-      home: '/'
+      home: '/',
+      logout: '/login'
     },
     strategies: {
       local: {
         endpoints: {
           login: {
-            url: 'auth/login',
+            url: 'admin/auth/login',
             method: 'post',
             propertyName: 'token'
           },
-          logout: { url: 'auth/logout', method: 'post' },
-          user: false
+          logout: { url: 'admin/auth/logout', method: 'post' },
+          user: { url: 'admin/auth/info' }
         },
         tokenRequired: true,
         tokenType: 'Bearer'
