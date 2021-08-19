@@ -50,6 +50,8 @@ export default {
    */
   css: [
     'vrwebdesign-nuxt/assets/style/main.scss',
+    'vrwebdesign-nuxt/assets/style/fonts/_lineawesome.scss',
+    'vrwebdesign-nuxt/assets/style/fonts/_material.scss',
     '~/assets/styles/main.scss',
     'animate.css/animate.css'
   ],
