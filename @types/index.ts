@@ -1,4 +1,8 @@
+import ProjectService from '~/services/projects'
+import SettingService from '~/services/settings'
+import SlideService from '~/services/slides'
 import UserService from '~/services/users'
+import PageService from '~/services/pages'
 
 interface IEnum {
   toSelect: { text: string; value: number }[]
@@ -58,6 +62,10 @@ declare module 'vue/types/vue' {
 declare module 'vue/types/vue' {
   interface NuxtServiceInstance {
     users: UserService
+    settings: SettingService
+    slides: SlideService
+    projects: ProjectService
+    pages: PageService
   }
   interface NuxtEnumInstance {
     role: IEnum

@@ -1,10 +1,9 @@
 import { IAuthUser } from '~/models/AuthUser'
 import { NuxtAxiosInstance } from 'vrwebdesign-nuxt/modules/nuxt-axios/types'
 import { BaseService } from './Helper/BaseService'
-export default class AuthService extends BaseService<IAuthUser> {
-  constructor(public $axios: NuxtAxiosInstance) {
-    super($axios, 'auth')
-  }
+export default class AuthService {
+  path = 'admin/auth'
+  constructor(public $axios: NuxtAxiosInstance) {}
   login(params: any) {
     return this.$axios.$post(`${this.path}/login`, params)
   }

@@ -65,7 +65,7 @@ export default {
       'vrwebdesign-nuxt/assets/style/tools/_responsive.scss'
     ]
   },
-  plugins: ['@/plugins/vue-awesome-swiper.js'],
+  plugins: ['@/plugins/vue-awesome-swiper.js', '@/plugins/interceptor.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -181,10 +181,6 @@ export default {
     rtl: true,
     treeShake: true,
     customVariables: ['~/assets/styles/setting/_variables.scss'],
-    defaultAssets: {
-      icons: 'md',
-      font: undefined
-    },
     lang: {
       locales: { fa: require('vuetify/src/locale/fa').default },
       current: 'fa'
