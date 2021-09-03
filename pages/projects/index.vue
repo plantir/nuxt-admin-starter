@@ -53,24 +53,7 @@ export default {
         {
           label: 'نام',
           clearable: false,
-          model: 'name',
-        },
-        {
-          label: 'وضعیت تایید',
-          type: 'select',
-          items: [
-            { text: 'تایید نشده', value: '0' },
-            {
-              text: 'تایید شده',
-              value: '1',
-            },
-          ],
-          model: 'is_verified',
-        },
-        {
-          label: 'تاریخ ایحاد',
-          type: 'date',
-          model: 'created_at',
+          model: 'title',
         },
       ],
     }

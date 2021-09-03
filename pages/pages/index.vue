@@ -8,7 +8,8 @@
         :title="title"
         :service="$service.pages"
         :filters="filters"
-        :withRecycle="true"
+        :withAdd="false"
+        :hideActionDelete="true"
       >
         <template #items="{ item }">
           <td>{{ item.id }}</td>
@@ -49,26 +50,9 @@ export default {
           model: 'id:=',
         },
         {
-          label: 'نام',
+          label: 'نام صفحه',
           clearable: false,
           model: 'name',
-        },
-        {
-          label: 'وضعیت تایید',
-          type: 'select',
-          items: [
-            { text: 'تایید نشده', value: '0' },
-            {
-              text: 'تایید شده',
-              value: '1',
-            },
-          ],
-          model: 'is_verified',
-        },
-        {
-          label: 'تاریخ ایحاد',
-          type: 'date',
-          model: 'created_at',
         },
       ],
     }

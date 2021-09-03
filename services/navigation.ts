@@ -10,50 +10,43 @@ export default class NavigationService {
         to: '/'
       },
       {
-        icon: 'la-images',
+        icon: 'la-image',
         title: 'اسلاید ها',
         to: '/slides'
       },
+
       {
         icon: 'la-images',
-        title: 'برند ها',
-        to: '/brands'
-      },
-      {
-        icon: 'la-images',
-        title: 'محصولات',
-        to: '/products'
-      },
-      {
-        icon: 'la-images',
-        title: 'اتریبیوت ها',
-        to: '/attributes'
-      },
-      {
-        icon: 'la-users',
         title: 'صفحات',
         to: '/pages'
       },
       {
-        icon: 'la-users',
+        icon: 'la-project-diagram',
         title: 'پروژه ها',
         to: '/projects'
+      },
+      {
+        icon: 'la-shopping-basket',
+        title: 'محصولات',
+        child: [
+          {
+            title: 'برند ها',
+            to: '/brands'
+          },
+          {
+            title: 'لیست محصولات',
+            to: '/products'
+          },
+          {
+            title: 'اتریبیوت ها',
+            to: '/attributes'
+          }
+        ]
       },
       {
         icon: 'la-cog',
         title: 'تنظیمات',
         to: '/settings'
-      },
-      {
-        icon: 'la-globe',
-        title: 'لندینگ بیماران خارج',
-        child: [
-          {
-            icon: 'la-user-md',
-            title: 'پزشکان',
-            to: '/doctors'
-          }
-        ]
       }
     ]
   }

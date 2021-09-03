@@ -30,7 +30,12 @@ export default {
       headers: [
         { text: 'آیدی', align: 'right', value: 'id', width: '10%' },
         { text: 'عنوان', align: 'right', value: 'title', width: '20%' },
-        { text: 'عنوان انگلیسی', align: 'right', value: 'en_title', width: '20%' },
+        {
+          text: 'عنوان انگلیسی',
+          align: 'right',
+          value: 'en_title',
+          width: '20%',
+        },
         {
           text: 'تاریخ ایجاد',
           align: 'right',
@@ -46,24 +51,12 @@ export default {
         {
           label: 'نام',
           clearable: false,
-          model: 'name',
+          model: 'title',
         },
         {
-          label: 'وضعیت تایید',
-          type: 'select',
-          items: [
-            { text: 'تایید نشده', value: '0' },
-            {
-              text: 'تایید شده',
-              value: '1',
-            },
-          ],
-          model: 'is_verified',
-        },
-        {
-          label: 'تاریخ ایحاد',
-          type: 'date',
-          model: 'created_at',
+          label: 'نام انگلیسی',
+          clearable: false,
+          model: 'en_title',
         },
       ],
     }
