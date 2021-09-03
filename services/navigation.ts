@@ -15,9 +15,24 @@ export default class NavigationService {
         to: '/slides'
       },
       {
+        icon: 'la-images',
+        title: 'برند ها',
+        to: '/brands'
+      },
+      {
+        icon: 'la-images',
+        title: 'محصولات',
+        to: '/products'
+      },
+      {
+        icon: 'la-images',
+        title: 'اتریبیوت ها',
+        to: '/attributes'
+      },
+      {
         icon: 'la-users',
         title: 'صفحات',
-        to: '/projects'
+        to: '/pages'
       },
       {
         icon: 'la-users',

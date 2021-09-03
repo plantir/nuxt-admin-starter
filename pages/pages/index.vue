@@ -26,7 +26,6 @@ export default {
     return {
       title: {
         text: 'لیست صفحات',
-        icon: 'la-pages',
       },
       headers: [
         { text: 'آیدی', align: 'right', value: 'id', width: '10%' },

@@ -6,16 +6,14 @@
       <vr-data-grid
         :headers="headers"
         :title="title"
-        :service="$service.projects"
+        :service="$service.brands"
         :filters="filters"
         :withRecycle="true"
       >
         <template #items="{ item }">
           <td>{{ item.id }}</td>
-          <td class="pa-4">
-            <v-img :src="item.image" max-width="150px"></v-img>
-          </td>
           <td>{{ item.title }}</td>
+          <td>{{ item.en_title }}</td>
           <td>{{ item.created_at | persianDate | persianDigit }}</td>
         </template>
       </vr-data-grid>
@@ -27,17 +25,12 @@ export default {
   data() {
     return {
       title: {
-        text: 'لیست اسلاید ها',
+        text: 'لیست برند ها',
       },
       headers: [
         { text: 'آیدی', align: 'right', value: 'id', width: '10%' },
-        {
-          text: 'تصویر',
-          align: 'right',
-          sortable: false,
-          width: '20%',
-        },
         { text: 'عنوان', align: 'right', value: 'title', width: '20%' },
+        { text: 'عنوان انگلیسی', align: 'right', value: 'en_title', width: '20%' },
         {
           text: 'تاریخ ایجاد',
           align: 'right',

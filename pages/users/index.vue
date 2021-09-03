@@ -31,7 +31,6 @@ export default {
     return {
       title: {
         text: 'لیست کاربران',
-        icon: 'la-user'
       },
       headers: [
         { text: 'آیدی', align: 'right', value: 'id', width: '10%' },

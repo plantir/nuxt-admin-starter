@@ -29,7 +29,6 @@ export default {
     return {
       title: {
         text: 'لیست اسلاید ها',
-        icon: 'la-images',
       },
       headers: [
         { text: 'آیدی', align: 'right', value: 'id', width: '10%' },

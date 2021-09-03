@@ -29,10 +29,10 @@ export default Vue.extend({
     if (this.$route.params.id !== 'create') {
       this.loading = true
       this.item = await this.service.$get(this.$route.params.id)
-      this.title = `ویرایش اسلاید {{title}}`
+      this.title = `ویرایش صفحه {{name}}`
       this.loading = false
     } else {
-      this.title = 'ایجاد اسلاید جدید'
+      this.title = 'ایجاد صفحه جدید'
     }
     this.formData = [
       {
